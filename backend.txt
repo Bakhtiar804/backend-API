@@ -1,0 +1,61 @@
+                    Backend Development
+
+                        === Class   1===
+
+file name   server.js
+
+import {express} from express
+
+const app = express()
+
+cont users = [
+{
+
+"id" : 1
+"name" : "Ali"
+
+}
+]
+
+ // json format data 
+app.
+
+
+   => for making simple api
+
+     // api get method
+
+app.get('/' , (req , res)=>{
+res.send(users)
+})
+
+in this / is url location
+
+     // api post method
+
+app.post('/' , (req , res)=>{
+users.push(req.body)
+}
+
+  // delete call 
+
+app.delete('user/:id' , (req ,res) =>{
+var userId = req.params.id.ToNumber()
+var index = users.findIndex(val => val === userId)
+
+users.splice( index , 1 )
+])
+
+   // for update 
+
+ app.put method is used splice in place of slice
+
+     /// for running the server 
+
+var Port = 5000;
+
+app.listen(Port , ()=>{
+}
+
+npm i --save--dev nodemon
+for continoiusly running the server 
