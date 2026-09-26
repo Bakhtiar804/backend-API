@@ -3,6 +3,7 @@ import userRoutes from "./routes/userRoutes.js"
 import productsRoute from "./routes/productRoutes.js";
 import recipeRoute from "./routes/recipeRoutes.js";
 import commentsRoute from "./routes/commentsRoutes.js";
+import categoriesRoute from "./routes/categories.js";
 
 
 
@@ -26,6 +27,8 @@ app.use(express.json());
 app.use('/comments', commentsRoute);
 
 
+app.use(express.json());
+app.use('/products' , categoriesRoute)
 
 
 

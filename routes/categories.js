@@ -59,7 +59,7 @@ categoriesRoute.get("/categories" , (req , res) =>{
 })
 
 
-productsRoute.put('/:id', (req, res) => {
+categoriesRoute.put('/:id', (req, res) => {
     const index = Number(req.params.id);
     const category = categories.find(category => category.id === index);
     if(category === undefined){
@@ -72,7 +72,7 @@ productsRoute.put('/:id', (req, res) => {
 })
 
 
-productsRoute.delete('/categories:id' , (req , res) => {
+categoriesRoute.delete('/categories:id' , (req , res) => {
     const id = Number(req.params.id);
     const index = categories?.findIndex(index => index.id === id);
     if (index === -1) {
